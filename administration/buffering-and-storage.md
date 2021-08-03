@@ -46,7 +46,7 @@ Fluent Bit implements the concept of logical queues: a Chunk is based on its Tag
 
 It's common to find cases that if we have multiple destinations for a Chunk, one of the destinations might be slower than the other, and maybe one of the destinations is generating backpressure and not all of them. In this scenario how do we limit the amount of filesystem Chunks that we are logically queueing ?.
 
-Starting from Fluent Bit v1.6, we introduced the new configuration property for output plugins called `storage.total_limit_size` which limits the number of Chunks that exists in the file system for a certain logical output destination. If one destinations reaches the `storage.total_limit_size` limit, the oldest Chunk from it queue for that logical output destination will be discarded.
+Starting from Fluent Bit v1.6, we introduced the new configuration property for output plugins called `storage.total_limit_size` which limits the number of Chunks that exist in the file system for a certain logical output destination. If one destinations reaches the `storage.total_limit_size` limit, the oldest Chunk from it queue for that logical output destination will be discarded.
 
 ## Configuration
 
